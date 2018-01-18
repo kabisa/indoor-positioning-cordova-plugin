@@ -1,0 +1,7 @@
+#!/bin/sh
+PVT_NUMBER=$(git symbolic-ref --short HEAD | sed 's/[^[0-9]*]*\([0-9]*\).*/\1/')
+PVT_NUMBER_COMMIT_MSG="[ #$PVT_NUMBER ] "
+
+if [ -n "$PVT_NUMBER" ] && ! grep -qF "$PVT_NUMBER_COMMIT_MSG" "$1" ; then
+  sed -i.bak -e "1s/^/$PVT_NUMBER_COMMIT_MSG/" "$1"
+fi
