@@ -1,5 +1,7 @@
 # Cordova plugin for Indoor Positioning
 
+[![Build Status](https://ci.kabisa.nl/buildStatus/icon?job=Indoor-positioning-cordova-plugin/master)](https://ci.kabisa.nl/job/Indoor-positioning-cordova-plugin/job/master/)
+
 ## Prerequisites
 
 * Node >= 6
