@@ -34,6 +34,12 @@ module.exports = function(config) {
     mochaReporter: {
       showDiff: true
     },
-    browsers: ["ChromeHeadless"]
+    browsers: ['ChromeHeadlessNoSandbox'],
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    }
   });
 };

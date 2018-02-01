@@ -9,7 +9,6 @@ RUN apt-get update \
           zlib1g zlib1g-dev \
           libcurl4-openssl-dev \
           libxslt-dev libxml2-dev \
-          xvfb \
           locales \
           apt-transport-https \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/*

@@ -23,7 +23,7 @@ pipeline {
 
     stage("Tests") {
       steps {
-        sh "xvfb-run bin/ci"
+        sh "bin/ci"
       }
     }
   }
