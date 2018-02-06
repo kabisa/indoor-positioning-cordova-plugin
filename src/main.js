@@ -1,3 +1,3 @@
-import { message } from "./message.js";
+import { indoorPositioningService } from "indoorPositioningService";
 
-export const alertMessage = () => alert(message);
+window.indoorPositioningService = indoorPositioningService();
