@@ -28,4 +28,18 @@
             </feature>
         </config-file>
     </platform>
+    <platform name="ios">
+      <config-file target="config.xml" parent="/*">
+          <feature name="IndoorPositioningService">
+              <param name="ios-package" value="IndoorPositioningService"/>
+          </feature>
+      </config-file>
+      <header-file src="src/ios/IndoorPositioningService.h"/>
+      <source-file src="src/ios/IndoorPositioningService.m"/>
+      <framework
+        src="src/ios/IndoorPositioning.framework"
+        custom="true"
+        embed="true"
+      />
+    </platform>
 </plugin>
