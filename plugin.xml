@@ -19,5 +19,13 @@
           custom="true"
           type="gradleReference"
         />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="IndoorPositioningService">
+                <param
+                  name="android-package"
+                  value="nl.kabisa.lighting.ips.IndoorPositioningService"
+                />
+            </feature>
+        </config-file>
     </platform>
 </plugin>
