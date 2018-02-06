@@ -1,3 +1,3 @@
 import { indoorPositioningService } from "./indoorPositioningService";
 
-window.indoorPositioning = indoorPositioningService();
+export default indoorPositioningService();

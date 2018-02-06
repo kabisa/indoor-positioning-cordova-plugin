@@ -25,4 +25,6 @@ var indoorPositioningService = function () {
   }
 };
 
-window.indoorPositioning = indoorPositioningService();
+var main = indoorPositioningService();
+
+module.exports = main;
