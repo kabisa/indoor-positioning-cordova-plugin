@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="indoor-positioning-cordova-plugin" version="0.0.1">
+    <name>Indoor Positioning</name>
+    <description>Indoor positioning using coded light</description>
+    <license>MIT</license>
+    <keywords>cordova,indoor,positioning</keywords>
+    <js-module src="www/bundle.js" name="indoorPositioning">
+        <clobbers target="indoorPositioning" />
+    </js-module>
+    <platform name="android">
+        <source-file
+          src="src/android/IndoorPositioningService.java"
+          target-dir="src/nl/kabisa/lighting/ips/"
+        />
+        <lib-file src="src/android/IndoorPositioningSdk.aar" />
+        <framework
+          src="src/android/indoorPositioning.gradle"
+          custom="true"
+          type="gradleReference"
+        />
+    </platform>
+</plugin>
