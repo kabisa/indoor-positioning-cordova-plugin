@@ -562,7 +562,7 @@ browserify@^14.5.0:
     vm-browserify "~0.0.1"
     xtend "^4.0.0"
 
-browserslist@^2.5.1:
+browserslist@^2.11.3:
   version "2.11.3"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.11.3.tgz#fe36167aed1bbcde4827ebfe71347a2cc70b99b2"
   dependencies:
@@ -649,9 +649,9 @@ callsites@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-0.2.0.tgz#afab96262910a7f33c19a5775825c69f34e350ca"
 
-caniuse-db@^1.0.30000748:
-  version "1.0.30000793"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000793.tgz#3c00c66e423a7a1907c7dd96769a78b2afa8a72e"
+caniuse-db@^1.0.30000794:
+  version "1.0.30000803"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000803.tgz#3e8d2baf56c2fd5a59c82e227928a0dc2c26702d"
 
 caniuse-lite@^1.0.30000792:
   version "1.0.30000792"
@@ -1138,7 +1138,7 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
-doctrine@^2.0.2:
+doctrine@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-2.1.0.tgz#5cd01fc101621b42c4cd7f5d1a66243716d3f39d"
   dependencies:
@@ -1259,18 +1259,19 @@ escodegen@1.x.x:
   optionalDependencies:
     source-map "~0.5.6"
 
-eslint-plugin-compat@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-compat/-/eslint-plugin-compat-2.1.0.tgz#c854947f96f3b9b4deddb8918e1fa23f75cbcdae"
+eslint-plugin-compat@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-compat/-/eslint-plugin-compat-2.2.0.tgz#d612a9988d9fba66bcd8e86fcc1b551753aac995"
   dependencies:
     babel-runtime "^6.26.0"
-    browserslist "^2.5.1"
-    caniuse-db "^1.0.30000748"
+    browserslist "^2.11.3"
+    caniuse-db "^1.0.30000794"
+    mdn-browser-compat-data "^0.0.20"
     requireindex "^1.1.0"
 
-eslint-plugin-prettier@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.5.0.tgz#39a91dd7528eaf19cd42c0ee3f2c1f684606a05f"
+eslint-plugin-prettier@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.6.0.tgz#33e4e228bdb06142d03c560ce04ec23f6c767dd7"
   dependencies:
     fast-diff "^1.1.1"
     jest-docblock "^21.0.0"
@@ -1286,9 +1287,9 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@^4.15.0:
-  version "4.15.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.15.0.tgz#89ab38c12713eec3d13afac14e4a89e75ef08145"
+eslint@^4.17.0:
+  version "4.17.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.17.0.tgz#dc24bb51ede48df629be7031c71d9dc0ee4f3ddf"
   dependencies:
     ajv "^5.3.0"
     babel-code-frame "^6.22.0"
@@ -1296,7 +1297,7 @@ eslint@^4.15.0:
     concat-stream "^1.6.0"
     cross-spawn "^5.1.0"
     debug "^3.1.0"
-    doctrine "^2.0.2"
+    doctrine "^2.1.0"
     eslint-scope "^3.7.1"
     eslint-visitor-keys "^1.0.0"
     espree "^3.5.2"
@@ -1435,7 +1436,7 @@ extend-shallow@^3.0.0:
     assign-symbols "^1.0.0"
     is-extendable "^1.0.1"
 
-extend@3, extend@^3.0.0, extend@~3.0.0, extend@~3.0.1:
+extend@3, extend@3.0.1, extend@^3.0.0, extend@~3.0.0, extend@~3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.1.tgz#a755ea7bc1adfcc5a31ce7e762dbaadc5e636444"
 
@@ -2615,6 +2616,12 @@ md5.js@^1.3.4:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+mdn-browser-compat-data@^0.0.20:
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.20.tgz#26e4a226d96cc5318fdc504d6dfd86907752da5c"
+  dependencies:
+    extend "3.0.1"
+
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
@@ -2719,9 +2726,9 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mocha@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/mocha/-/mocha-4.1.0.tgz#7d86cfbcf35cb829e2754c32e17355ec05338794"
+mocha@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/mocha/-/mocha-5.0.0.tgz#cccac988b0bc5477119cba0e43de7af6d6ad8f4e"
   dependencies:
     browser-stdout "1.3.0"
     commander "2.11.0"
@@ -3542,9 +3549,9 @@ rollup-pluginutils@^2.0.1:
     estree-walker "^0.3.0"
     micromatch "^2.3.11"
 
-rollup@^0.54.1:
-  version "0.54.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.54.1.tgz#415a5d999421502646cf54b873fc4ce1a7393970"
+rollup@^0.55.3:
+  version "0.55.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.55.3.tgz#0af082a766d51c3058430c8372442ff5207d8736"
 
 run-async@^2.2.0:
   version "2.3.0"
@@ -3655,9 +3662,9 @@ sinon-chai@^2.14.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/sinon-chai/-/sinon-chai-2.14.0.tgz#da7dd4cc83cd6a260b67cca0f7a9fdae26a1205d"
 
-sinon@^4.1.6:
-  version "4.1.6"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.1.6.tgz#9cb346bddb180d68a804429ffe14978d7fafd629"
+sinon@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.2.2.tgz#e039ab27bdb426fc61363c380726e996a2e2c620"
   dependencies:
     diff "^3.1.0"
     formatio "1.2.0"
