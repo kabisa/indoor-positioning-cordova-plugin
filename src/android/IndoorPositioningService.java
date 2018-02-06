@@ -52,24 +52,24 @@ class IndoorPositioningService extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         try {
             switch (action) {
-                case "ipStart":
+                case "start":
                     indoorPositioning.start();
                     callbackContext.success();
                     return true;
-                case "ipStop":
+                case "stop":
                     indoorPositioning.stop();
                     callbackContext.success();
                     return true;
-                case "ipGetError":
+                case "getError":
                     callbackContext.success(lastError);
                     return true;
-                case "ipGetHeading":
+                case "getHeading":
                     callbackContext.success(lastHeading);
                     return true;
-                case "ipGetLocation":
+                case "getLocation":
                     callbackContext.success(lastLocation);
                     return true;
-                case "ipSetConfiguration":
+                case "setConfiguration":
                     indoorPositioning.setConfiguration(args.getString(0));
                     callbackContext.success();
                     return true;
