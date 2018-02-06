@@ -24,6 +24,7 @@ All JavaScript code is linted with [ESLint](https://eslint.org/).
 * Run `yarn test:unit` to run all unit tests once.
 * Run `yarn test:watch` to run all unit tests continuously.
 * Run `yarn test` to run the linter and all unit tests once.
+* Run `yarn build` to watch source files and build a bundle when they change.
 
 ### Android
 
