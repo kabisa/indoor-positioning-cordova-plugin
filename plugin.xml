@@ -41,5 +41,32 @@
         custom="true"
         embed="true"
       />
+      <config-file
+        target="*-Info.plist"
+        parent="NSBluetoothPeripheralUsageDescription"
+      >
+        <string>The app uses bluetooth to determine your indoor location.</string>
+      </config-file>
+      <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+        <string>The app uses the camera to determine your indoor location.</string>
+      </config-file>
+      <config-file
+        target="*-Info.plist"
+        parent="NSLocationAlwaysAndWhenInUseUsageDescription"
+      >
+        <string>The app uses your location to fetch maps of the buildings in your vicinity.</string>
+      </config-file>
+      <config-file
+        target="*-Info.plist"
+        parent="NSLocationAlwaysUsageDescription"
+      >
+        <string>The app uses your location to fetch maps of the buildings in your vicinity.</string>
+      </config-file>
+      <config-file
+        target="*-Info.plist"
+        parent="NSLocationWhenInUseUsageDescription"
+      >
+        <string>The app uses your location to fetch maps of the buildings in your vicinity.</string>
+      </config-file>
     </platform>
 </plugin>
