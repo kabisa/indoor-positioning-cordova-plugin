@@ -1,0 +1,7 @@
+#!/bin/sh
+rm -rf app/platforms/android
+rm -rf app/platforms/ios
+rm -rf app/plugins/android.json
+rm -rf app/plugins/ios.json
+bin/cordova platform add android
+bin/cordova platform add ios
