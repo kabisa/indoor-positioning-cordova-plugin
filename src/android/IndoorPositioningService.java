@@ -49,6 +49,12 @@ class IndoorPositioningService extends CordovaPlugin {
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        indoorPositioning.unregister();
+    }
+
+    @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         try {
             switch (action) {
