@@ -53,19 +53,23 @@ Run `bin/setup` to install all required node packages and set up git hooks.
 
 ### Linting
 
-All JavaScript code is linted with [ESLint](https://eslint.org/).
+All JavaScript code for the plugin is linted with [ESLint](https://eslint.org/).
 
 ### JavaScript
 
-* Run `yarn lint` to lint all source code.
-* Run `yarn test:unit` to run all unit tests once.
-* Run `yarn test:watch` to run all unit tests continuously.
-* Run `yarn test` to run the linter and all unit tests once.
-* Run `yarn build` to watch source files and build a bundle when they change.
+The following commands are available in the `plugin` folder:
 
-### Android
+* `yarn lint` lints all source code.
+* `yarn test:unit` runs all unit tests once.
+* `yarn test:watch` runs all unit tests continuously.
+* `yarn test` runs the linter and all unit tests once.
+* `yarn build` watches source files and builds a bundle when they change.
 
-* Set up a new Cordova app and add the Android platform.
-One way to do this is described in the [Cordova documentation](https://cordova.apache.org/docs/en/latest/guide/cli/index.html).
-* Add this plugin to the app by executing `cordova plugin add <path to plugin>`.
-* Execute `cordova build android` and import the code in `<your app>/platforms/android` as a project in Android Studio, as described in the [Cordova documentation](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#opening-a-project-in-android-studio).
+### Android and iOS
+
+There's a very basic Cordova app in the `app` folder that demonstrates the use of this plugin.
+You can use this app to debug the platform-specific code.
+
+Run `bin/clean` to regenerate the Android and iOS code for this app.
+Afterwards, you can import the code in `app/platforms/android` as a project in Android Studio, as described in the [Cordova documentation](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#opening-a-project-in-android-studio).
+Similarly, you can import the code in `app/platforms/ios` as a project in XCode.
