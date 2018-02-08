@@ -1,0 +1,23 @@
+{
+    "name": "nl.kabisa.lighting.ips.indoorpositioningplugintest",
+    "displayName": "IndoorPositioningPluginTest",
+    "version": "0.0.1",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "cordova-android": "^7.0.0",
+        "cordova-ios": "^4.5.4",
+        "cordova-plugin-whitelist": "^1.3.3",
+        "indoor-positioning-cordova-plugin": "file:../plugin"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "indoor-positioning-cordova-plugin": {}
+        },
+        "platforms": [
+            "android",
+            "ios"
+        ]
+    }
+}

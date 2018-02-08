@@ -1,0 +1,7 @@
+hooks/*
+!hooks/.keep
+platforms/*
+!platforms/.keep
+plugins/*
+!plugins/.keep
+www/js/configuration.js
