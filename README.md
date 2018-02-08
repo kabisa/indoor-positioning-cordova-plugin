@@ -14,13 +14,13 @@ A number of configuration strings are available in the shared folder for IPS in 
 Add the plugin to your app by executing the following command.
 
 ```
-cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git
+cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#:/plugin
 ```
 
 Alternatively, modify `config.xml` for your app manually by adding the following.
 
 ```
-<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git" />
+<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#:/plugin" />
 ```
 
 ### Zebra devices
@@ -30,13 +30,13 @@ A version of this plugin that wraps this version of the SDK is available on the 
 Add this version of the plugin to your app by executing the following command.
 
 ```
-cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra
+cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra:/plugin
 ```
 
 Alternatively, modify `config.xml` for your app manually by adding the following.
 
 ```
-<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra" />
+<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra:/plugin" />
 ```
 
 ## Development workflow

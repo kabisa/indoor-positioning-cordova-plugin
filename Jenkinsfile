@@ -3,7 +3,7 @@ projectId = "indoor-positioning-cordova-plugin"
 pipeline {
   agent {
     dockerfile {
-      filename "dockerfiles/ci/Dockerfile"
+      filename "plugin/dockerfiles/ci/Dockerfile"
       additionalBuildArgs support.ciDockerFileBuildArgs()
       args support.ciDockerFileRunArgs(projectId)
     }
@@ -16,14 +16,14 @@ pipeline {
   stages {
     stage("Setup") {
       steps {
-        sh "rm -rf node_modules | true"
-        sh "bin/setup"
+        sh "rm -rf plugin/node_modules | true"
+        sh "cd plugin && bin/setup"
       }
     }
 
     stage("Tests") {
       steps {
-        sh "bin/ci"
+        sh "cd plugin && bin/ci"
       }
     }
   }
