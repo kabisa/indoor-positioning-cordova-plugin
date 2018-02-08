@@ -2,21 +2,58 @@
 
 [![Build Status](https://ci.kabisa.nl/buildStatus/icon?job=Indoor-positioning-cordova-plugin/master)](https://ci.kabisa.nl/job/Indoor-positioning-cordova-plugin/job/master/)
 
-## Prerequisites
+This plugin wraps the indoor positioning SDK developed by Philips Lighting.
+It can be used to obtain information about the location and heading of a user's device.
+
+You need a configuration string to be able to use the SDK to navigate inside a given venue.
+Each configuration string corresponds to a single venue and has an expiration date.
+A number of configuration strings are available in the shared folder for IPS in LastPass.
+
+## Using the plugin
+
+Add the plugin to your app by executing the following command.
+
+```
+cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git
+```
+
+Alternatively, modify `config.xml` for your app manually by adding the following.
+
+```
+<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git" />
+```
+
+### Zebra devices
+
+There's a modified version of the indoor positioning SDK for Android that supports certain Zebra devices.
+A version of this plugin that wraps this version of the SDK is available on the `zebra` branch.
+Add this version of the plugin to your app by executing the following command.
+
+```
+cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra
+```
+
+Alternatively, modify `config.xml` for your app manually by adding the following.
+
+```
+<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra" />
+```
+
+## Development workflow
+
+### Prerequisites
 
 * Node >= 6
 * NPM
 * Yarn
 
-## Getting started
+### Getting started
 
 Run `bin/setup` to install all required node packages and set up git hooks.
 
-## Linting
+### Linting
 
 All JavaScript code is linted with [ESLint](https://eslint.org/).
-
-## Development workflow
 
 ### JavaScript
 
