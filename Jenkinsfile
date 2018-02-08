@@ -17,7 +17,7 @@ pipeline {
     stage("Setup") {
       steps {
         sh "rm -rf plugin/node_modules | true"
-        sh "cd plugin && bin/setup"
+        sh "bin/setup"
       }
     }
 
