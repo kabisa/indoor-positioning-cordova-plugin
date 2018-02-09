@@ -79,34 +79,40 @@
     if ([[error domain] isEqualToString:IPIndoorPositioningErrorDomain]) {
         switch ([error code]) {
             case IPIndoorPositioningErrorCannotSetPropertyWhileRunning:
-                lastError = @"Cannot set property while running";
+                lastError = @"CANNOT_SET_PROPERTY_WHILE_RUNNING";
                 break;
             case IPIndoorPositioningErrorAlreadyRunning:
-                lastError = @"Already running";
+                lastError = @"ALREADY_RUNNING";
                 break;
             case IPIndoorPositioningErrorAlreadyStopped:
-                lastError = @"Already stopped";
+                lastError = @"ALREADY_STOPPED";
                 break;
             case IPIndoorPositioningErrorDeviceNotSupported:
-                lastError = @"Device not supported";
+                lastError = @"DEVICE_NOT_SUPPORTED";
                 break;
             case IPIndoorPositioningErrorCameraAccessNotGranted:
-                lastError = @"Camera access not granted";
+                lastError = @"CAMERA_ACCESS_ERROR";
                 break;
             case IPIndoorPositioningErrorLocationNotGranted:
-                lastError = @"Location access not granted";
+                lastError = @"LOCATION_ACCESS_ERROR";
                 break;
             case IPIndoorPositioningErrorLocationTimeOut:
-                lastError = @"Location timeout";
+                lastError = @"LOCATION_TIMEOUT";
                 break;
             case IPIndoorPositioningErrorConnectionFailed:
-                lastError = @"Connection failed";
+                lastError = @"CONNECTION_FAILED";
                 break;
             case IPIndoorPositioningErrorConfigurationFailed:
-                lastError = @"Configuration failed";
+                lastError = @"CONFIGURATION_FAILED";
+                break;
+            case IPIndoorPositioningErrorBluetoothPoweredOff:
+                lastError = @"BLUETOOTH_POWERED_OFF";
+                break;
+            case IPIndoorPositioningErrorCameraNotSupported:
+                lastError = @"CAMERA_NOT_SUPPORTED";
                 break;
             default:
-                lastError = @"Unknown error";
+                lastError = @"UNKNOWN_ERROR";
                 break;
         }
     }
