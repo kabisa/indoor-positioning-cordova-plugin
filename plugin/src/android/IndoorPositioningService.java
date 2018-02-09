@@ -19,8 +19,8 @@ class IndoorPositioningService extends CordovaPlugin {
     private IndoorPositioning indoorPositioning;
     private IndoorPositioning.Listener listener;
 
-    private JSONObject lastLocation;
-    private JSONObject lastHeading;
+    private JSONObject lastLocation = new JSONObject();
+    private JSONObject lastHeading = new JSONObject();
     private String lastError;
 
     @Override
