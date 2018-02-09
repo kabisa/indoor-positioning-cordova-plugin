@@ -1,7 +1,9 @@
 #!/bin/sh
 rm -rf app/platforms/android
 rm -rf app/platforms/ios
+rm -rf app/plugins/indoor-positioning-cordova-plugin
 rm -rf app/plugins/android.json
 rm -rf app/plugins/ios.json
+bin/cordova plugin add ../plugin
 bin/cordova platform add android
 bin/cordova platform add ios
