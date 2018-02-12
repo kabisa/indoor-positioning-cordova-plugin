@@ -14,13 +14,13 @@ A number of configuration strings are available in the shared folder for IPS in 
 Add the plugin to your app by executing the following command.
 
 ```
-cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#:/plugin
+cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git
 ```
 
 Alternatively, modify `config.xml` for your app manually by adding the following.
 
 ```
-<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#:/plugin" />
+<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git" />
 ```
 
 ### Zebra devices
@@ -30,20 +30,20 @@ A version of this plugin that wraps this version of the SDK is available on the 
 Add this version of the plugin to your app by executing the following command.
 
 ```
-cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra:/plugin
+cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra
 ```
 
 Alternatively, modify `config.xml` for your app manually by adding the following.
 
 ```
-<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra:/plugin" />
+<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra" />
 ```
 
 ## Development workflow
 
 ### Prerequisites
 
-* Node >= 6
+* Node
 * NPM
 * Yarn
 
@@ -56,8 +56,6 @@ Run `bin/setup` to install all required node packages and set up git hooks.
 All JavaScript code for the plugin is linted with [ESLint](https://eslint.org/).
 
 ### JavaScript
-
-The following commands are available in the `plugin` folder:
 
 * `yarn lint` lints all source code.
 * `yarn test:unit` runs all unit tests once.
