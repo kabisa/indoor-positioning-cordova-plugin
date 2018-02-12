@@ -18,6 +18,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <plugin name="indoor-positioning-cordova-plugin" spec="../plugin" />
-    <engine name="android" spec="~7.0.0" />
-    <engine name="ios" spec="~4.5.4" />
+    <engine name="android" spec="^7.0.0" />
+    <engine name="ios" spec="^4.5.4" />
 </widget>
