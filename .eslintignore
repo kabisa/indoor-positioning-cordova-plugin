@@ -1,2 +1,3 @@
 config/*.js
 www/*.js
+app/www/js/*.js
