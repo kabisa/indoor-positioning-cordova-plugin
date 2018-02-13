@@ -19,8 +19,8 @@ class IndoorPositioningService extends CordovaPlugin {
     private IndoorPositioning indoorPositioning;
     private IndoorPositioning.Listener listener;
 
-    private JSONObject lastLocation = new JSONObject();
-    private JSONObject lastHeading = new JSONObject();
+    private JSONObject lastLocation;
+    private JSONObject lastHeading;
     private String lastError;
 
     @Override
@@ -70,10 +70,18 @@ class IndoorPositioningService extends CordovaPlugin {
                     callbackContext.success(lastError);
                     return true;
                 case "getHeading":
-                    callbackContext.success(lastHeading);
+                    if (lastHeading == null) {
+                      callbackContext.success((String) null);
+                    } else {
+                      callbackContext.success(lastHeading);
+                    }
                     return true;
                 case "getLocation":
-                    callbackContext.success(lastLocation);
+                    if (lastLocation == null) {
+                      callbackContext.success((String) null);
+                    } else {
+                      callbackContext.success(lastLocation);
+                    }
                     return true;
                 case "setConfiguration":
                     indoorPositioning.setConfiguration(args.getString(0));
