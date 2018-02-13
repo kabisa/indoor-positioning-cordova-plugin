@@ -13,7 +13,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 class IndoorPositioningService extends CordovaPlugin {
     private IndoorPositioning indoorPositioning;
@@ -23,6 +25,23 @@ class IndoorPositioningService extends CordovaPlugin {
     private JSONObject lastHeading;
     private String lastError;
 
+    private Map<String, Object> replaceUnserializableValues(Map<String, Object> map) {
+        Map<String, Object> serializableMap = new HashMap<>();
+        for (Map.Entry<String, Object> entry : map.entrySet()) {
+            Object value = entry.getValue();
+            if (Objects.equals(Float.NEGATIVE_INFINITY, value)) {
+                serializableMap.put(entry.getKey(), -Float.MAX_VALUE);
+            } else if (Objects.equals(Float.POSITIVE_INFINITY, value)) {
+                serializableMap.put(entry.getKey(), Float.MAX_VALUE);
+            } else if (Objects.equals(Float.NaN, value)) {
+                serializableMap.put(entry.getKey(), null);
+            } else {
+                serializableMap.put(entry.getKey(), entry.getValue());
+            }
+        }
+        return serializableMap;
+    }
+
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
@@ -30,12 +49,12 @@ class IndoorPositioningService extends CordovaPlugin {
         listener = new IndoorPositioning.Listener() {
             @Override
             public void didUpdateHeading(Map<String, Object> map) {
-                lastHeading = new JSONObject(map);
+                lastHeading = new JSONObject(replaceUnserializableValues(map));
             }
 
             @Override
             public void didUpdateLocation(Map<String, Object> map) {
-                lastLocation = new JSONObject(map);
+                lastLocation = new JSONObject(replaceUnserializableValues(map));
             }
 
             @Override
