@@ -23,22 +23,6 @@ Alternatively, modify `config.xml` for your app manually by adding the following
 <plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git" />
 ```
 
-### Zebra devices
-
-There's a modified version of the indoor positioning SDK for Android that supports certain Zebra devices.
-A version of this plugin that wraps this version of the SDK is available on the `zebra` branch.
-Add this version of the plugin to your app by executing the following command.
-
-```
-cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra
-```
-
-Alternatively, modify `config.xml` for your app manually by adding the following.
-
-```
-<plugin name="indoor-positioning-cordova-plugin" spec="git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git#zebra" />
-```
-
 ## Development workflow
 
 ### Prerequisites
