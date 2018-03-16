@@ -5,3 +5,4 @@ platforms/*
 plugins/*
 !plugins/.keep
 www/js/configuration.js
+www/js/venueData.js

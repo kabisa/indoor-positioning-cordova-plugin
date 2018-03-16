@@ -9,5 +9,6 @@
 - (void)getHeading:(CDVInvokedUrlCommand*)command;
 - (void)getLocation:(CDVInvokedUrlCommand*)command;
 - (void)setConfiguration:(CDVInvokedUrlCommand*)command;
+- (void)setVenueData:(CDVInvokedUrlCommand*)command;
 
 @end

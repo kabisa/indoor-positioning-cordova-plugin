@@ -2,6 +2,7 @@ package nl.kabisa.lighting.ips;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Base64;
 
 import com.philips.indoorpositioning.library.IndoorPositioning;
 
@@ -104,6 +105,12 @@ class IndoorPositioningService extends CordovaPlugin {
                     return true;
                 case "setConfiguration":
                     indoorPositioning.setConfiguration(args.getString(0));
+                    callbackContext.success();
+                    return true;
+                case "setVenueData":
+                    String base64EncodedVenueData = args.getString(0);
+                    byte[] venueData = Base64.decode(base64EncodedVenueData, Base64.DEFAULT);
+                    indoorPositioning.setVenueData(venueData);
                     callbackContext.success();
                     return true;
                 default:

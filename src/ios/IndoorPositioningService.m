@@ -64,6 +64,20 @@
     [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
+- (void)setVenueData:(CDVInvokedUrlCommand *)command
+{
+    CDVPluginResult *result;
+    NSString *base64EncodedVenueData = [command.arguments objectAtIndex:0];
+    if (base64EncodedVenueData == nil) {
+        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"No venue data provided"];
+    } else {
+        NSData* venueData = [[NSData alloc] initWithBase64EncodedString:base64EncodedVenueData options:0];
+        [indoorPositioning setVenueData:venueData];
+        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    }
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+}
+
 - (void)indoorPositioning:(IPIndoorPositioning *)indoorPositioning didUpdateHeading:(NSDictionary *)heading
 {
     lastHeading = heading;

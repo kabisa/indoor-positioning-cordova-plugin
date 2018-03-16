@@ -7,8 +7,14 @@ var app = {
         window.indoorPositioning.setConfiguration(
           configuration,
           () => this.logEvent("Successfully set configuration"),
-          (error) =>
+          error =>
             this.logEvent("Error while setting configuration: " + error)
+        );
+        window.indoorPositioning.setVenueData(
+          venueData,
+          () => this.logEvent("Successfully set venue data"),
+          error =>
+            this.logEvent("Error while setting venue data: " + error)
         );
         window.indoorPositioning.start(
           () => this.logEvent("Started successfully"),
