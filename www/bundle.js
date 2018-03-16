@@ -4,8 +4,8 @@ var SERVICE = "IndoorPositioningService";
 
 var forward = function (exec, action) { return function (success, error) { return exec(success, error, SERVICE, action, []); }; };
 
-var setConfiguration = function (exec) { return function (configuration, success, error) {
-  exec(success, error, SERVICE, "setConfiguration", [configuration]);
+var forwardWithData = function (exec, action) { return function (data, success, error) {
+  exec(success, error, SERVICE, action, [data]);
 }; };
 
 var indoorPositioningService = function () {
@@ -17,7 +17,8 @@ var indoorPositioningService = function () {
       getError: forward(exec, "getError"),
       getHeading: forward(exec, "getHeading"),
       getLocation: forward(exec, "getLocation"),
-      setConfiguration: setConfiguration(exec)
+      setConfiguration: forwardWithData(exec, "setConfiguration"),
+      setVenueData: forwardWithData(exec, "setVenueData")
     };
   } else {
     // eslint-disable-next-line no-console
