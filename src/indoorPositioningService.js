@@ -3,8 +3,8 @@ const SERVICE = "IndoorPositioningService";
 const forward = (exec, action) => (success, error) =>
   exec(success, error, SERVICE, action, []);
 
-const setConfiguration = exec => (configuration, success, error) => {
-  exec(success, error, SERVICE, "setConfiguration", [configuration]);
+const forwardWithData = (exec, action) => (data, success, error) => {
+  exec(success, error, SERVICE, action, [data]);
 };
 
 export const indoorPositioningService = () => {
@@ -16,7 +16,8 @@ export const indoorPositioningService = () => {
       getError: forward(exec, "getError"),
       getHeading: forward(exec, "getHeading"),
       getLocation: forward(exec, "getLocation"),
-      setConfiguration: setConfiguration(exec)
+      setConfiguration: forwardWithData(exec, "setConfiguration"),
+      setVenueData: forwardWithData(exec, "setVenueData")
     };
   } else {
     // eslint-disable-next-line no-console

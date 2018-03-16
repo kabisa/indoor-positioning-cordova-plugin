@@ -57,20 +57,20 @@ describe("Indoor Positioning Service", function() {
       testForwards
     );
 
-    it("forwards setConfiguration actions", function() {
-      const configuration = "abc";
-      indoorPositioningService().setConfiguration(
-        configuration,
-        success,
-        error
-      );
-      expect(this.execStub).to.have.been.calledWith(
-        success,
-        error,
-        SERVICE,
-        "setConfiguration",
-        [configuration]
-      );
-    });
+    const testForwardsWithData = action => {
+      it(`forwards ${action} actions with data`, function() {
+        const data = "abc";
+        indoorPositioningService()[action](data, success, error);
+        expect(this.execStub).to.have.been.calledWith(
+          success,
+          error,
+          SERVICE,
+          action,
+          [data]
+        );
+      });
+    };
+
+    ["setConfiguration", "setVenueData"].map(testForwardsWithData);
   });
 });
