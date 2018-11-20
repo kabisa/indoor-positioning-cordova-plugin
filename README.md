@@ -7,7 +7,6 @@ It can be used to obtain information about the location and heading of a user's 
 
 You need a configuration string to be able to use the SDK to navigate inside a given venue.
 Each configuration string corresponds to a single venue and has an expiration date.
-A number of configuration strings are available in the shared folder for IPS in LastPass.
 
 ## Using the plugin
 
