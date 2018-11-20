@@ -2,7 +2,7 @@
 
 [![Build Status](https://ci.kabisa.nl/buildStatus/icon?job=Indoor-positioning-cordova-plugin/master)](https://ci.kabisa.nl/job/Indoor-positioning-cordova-plugin/job/master/)
 
-This plugin wraps the indoor positioning SDK developed by Philips Lighting.
+This plugin wraps the indoor positioning SDK developed by Signify.
 It can be used to obtain information about the location and heading of a user's device.
 
 You need a configuration string to be able to use the SDK to navigate inside a given venue.
