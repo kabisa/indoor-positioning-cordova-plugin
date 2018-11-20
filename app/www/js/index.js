@@ -10,12 +10,14 @@ var app = {
           error =>
             this.logEvent("Error while setting configuration: " + error)
         );
-        window.indoorPositioning.setVenueData(
-          venueData,
-          () => this.logEvent("Successfully set venue data"),
-          error =>
-            this.logEvent("Error while setting venue data: " + error)
-        );
+        if (venueData) {
+          window.indoorPositioning.setVenueData(
+            venueData,
+            () => this.logEvent("Successfully set venue data"),
+            error =>
+              this.logEvent("Error while setting venue data: " + error)
+          );  
+        }
         window.indoorPositioning.start(
           () => this.logEvent("Started successfully"),
           error => this.logEvent("Error while starting: " + error)
