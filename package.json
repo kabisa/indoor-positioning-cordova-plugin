@@ -1,7 +1,6 @@
 {
   "name": "indoor-positioning-cordova-plugin",
   "private": true,
-  "repository": "https://gitlab.com/luc2/indoor-positioning-cordova-plugin.git",
   "version": "0.0.1",
   "description": "Cordova plugin for indoor positioning",
   "keywords": [
