@@ -1,2 +1,3 @@
 node_modules
-
+src/android/IndoorPositioningSdk.aar
+src/ios/IndoorPositioning.framework
