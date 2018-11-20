@@ -10,11 +10,29 @@ Each configuration string corresponds to a single venue and has an expiration da
 
 ## Using the plugin
 
-Add the plugin to your app by executing the following command.
+1. Clone this repository and navigate to the folder in which you've cloned it.
+1. Put the Android SDK (`IndoorPositioning.aar`) in the folder `src/android`.
+1. Put the iOS SDK (`IndoorPositioning.framework`) in the folder `src/ios`.
+1. Add the plugin to your Cordova app by executing `cordova plugin add <folder in which you've cloned the plugin>`.
 
-```
-cordova plugin add git+ssh://git@github.com:kabisa/indoor-positioning-cordova-plugin.git
-```
+This slightly cumbersome way of adding the plugin is required because we're not allowed to distribute the SDKs.
+You have to manually add the Android and iOS SDK after obtaining them from Signify.
+
+After adding the plugin to your Cordova app, you'll have access to the object `window.indoorPositioning`.
+This object has the following methods:
+
+* `start`, to start the SDK.
+* `stop`, to stop the SDK.
+* `setConfiguration`, to set the configuration for a given venue.
+* `getLocation`, to get the most recent location of the device running the app.
+* `getError`, to get the most recent error raised by the SDK.
+
+Each method takes a success and an error callback.
+
+* For the methods `start`, `stop`, and `setConfiguration`, the success callback takes no argument.
+* For the method `getLocation`, the success callback takes a location object as argument, with two attributes: `kIPLocationLatitude` and `kIPLocationLongitude`.
+* For the method `getError` the success callback takes an error as argument.
+* The error callback takes an error as argument.
 
 ## Development workflow
 
