@@ -13,10 +13,7 @@ module.exports = {
   extends: ["eslint:recommended"],
   parserOptions: {
     sourceType: "module",
-    ecmaFeatures: {
-      modules: true,
-      experimentalObjectRestSpread: true
-    }
+    ecmaVersion: 6
   },
   rules: {
     "prettier/prettier": "error",
