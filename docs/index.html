@@ -37,9 +37,31 @@
       }
 
       .center {
+        display: inline-block;
+        margin: 1.5rem 0 1.5rem 50%;
+      }
+
+      .center img {
+        margin-left: -50%;
+      }
+
+      a.shrink {
+        transition: background-color .2s, transform .2s;
+      }
+
+      a.shrink:active {
+        transform: scale(0.95);
+      }
+
+      .button {
+        background-color: #fff;
+        border-radius: 0.5rem;
+        color: #2e3037;
         display: flex;
         justify-content: center;
-        margin: 3rem;
+        margin: 3rem auto;
+        padding: 0.5rem;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -62,12 +84,13 @@
       <p>
         The source code, installation instructions, and technical documentation for this plugin is available on Github:
       </p>
-      <a class="center" href="https://github.com/kabisa/indoor-positioning-cordova-plugin">
+      <a class="center shrink" href="https://github.com/kabisa/indoor-positioning-cordova-plugin">
         <img src="github-logo-white.svg" alt="Github logo" />
       </a>
       <p>
-        <a href="https://www.kabisa.nl/contact/">Contact Kabisa</a> for more information and support regarding this plugin.
+        If you need more information or support regarding this plugin, just get in touch with Kabisa.
       <p>
+      <a class="button shrink" href="https://www.kabisa.nl/contact/">Contact Kabisa</a>
     </main>
   </body>
 </html>
