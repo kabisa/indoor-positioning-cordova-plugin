@@ -31,7 +31,7 @@ Each method takes a success and an error callback.
 
 * For the methods `start`, `stop`, and `setConfiguration`, the success callback takes no argument.
 * For the method `getLocation`, the success callback takes a location object as argument, with two attributes: `kIPLocationLatitude` and `kIPLocationLongitude`.
-* For the method `getError` the success callback takes an error as argument.
+* For the method `getError`, the success callback takes an error as argument.
 * The error callback takes an error as argument.
 
 ## Development workflow
