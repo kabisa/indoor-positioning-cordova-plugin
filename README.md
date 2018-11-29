@@ -24,15 +24,28 @@ This object has the following methods:
 * `start`, to start the SDK.
 * `stop`, to stop the SDK.
 * `setConfiguration`, to set the configuration for a given venue.
+* `getHeading`, to get the most recent heading of the device running the app.
 * `getLocation`, to get the most recent location of the device running the app.
 * `getError`, to get the most recent error raised by the SDK.
 
 Each method takes a success and an error callback.
 
 * For the methods `start`, `stop`, and `setConfiguration`, the success callback takes no argument.
-* For the method `getLocation`, the success callback takes a location object as argument, with two attributes: `kIPLocationLatitude` and `kIPLocationLongitude`.
-* For the method `getError`, the success callback takes an error as argument.
-* The error callback takes an error as argument.
+* For the method `getHeading`, the success callback takes an object representing heading data as argument, with the following properties:
+  * `kIPHeadingDegrees`: a double representing the heading of the device in degrees.
+  * `kIPHeadingAccuracy`: a double representing the accuracy of the reported heading.
+  * `kIPHeadingArbitraryNorthDegrees`: a double representing the heading in degrees,
+    relative to the heading of the device when starting the SDK.
+* For the method `getLocation`, the success callback takes an object representing location data as argument, with the following attributes:
+  * `kIPLocationLatitude`: a double representing the latitude of the device's location.
+  * `kIPLocationLongitude`: a double representing the longitude of the device's location.
+  * `kIPLocationAltitude`: a double representing the altitude of the device's location.
+  * `kIPLocationHorizontalAccuracy`: a double representing the horizontal accuracy in meters.
+  * `kIPLocationVerticalAccuracy`: a double representing the vertical accuracy in meters.
+  * `kIPLocationFloorLevel`: an integer representing the floor level.
+    If the floor level is unknown, this property will not be present.
+* For the method `getError`, the success callback takes a string representing an error as argument.
+* The error callback takes a string representing an error as argument.
 
 ## Development workflow
 
