@@ -1,17 +1,22 @@
 FROM node:9
 
 RUN apt-get update \
-  && apt-get -y install apt-utils \
-          build-essential \
-          git-core \
-          curl libssl-dev \
-          libreadline-dev \
-          zlib1g zlib1g-dev \
-          libcurl4-openssl-dev \
-          libxslt-dev libxml2-dev \
-          locales \
+  && apt-get -y install \
           apt-transport-https \
-  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/*
+          apt-utils \
+          build-essential \
+          curl \
+          git-core \
+          libcurl4-openssl-dev \
+          libreadline-dev \
+          libssl-dev \
+          libxml2-dev \
+          libxslt-dev \
+          locales \
+          zlib1g \
+          zlib1g-dev \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/*
 
 # Install Chrome
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
@@ -19,7 +24,8 @@ RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add
   && apt-get update \
   && apt-get -y install google-chrome-stable \
   && rm /etc/apt/sources.list.d/google-chrome.list \
-  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/*
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/*
 ENV CHROME_BIN /usr/bin/google-chrome-stable
 
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales && \
